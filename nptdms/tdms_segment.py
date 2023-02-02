@@ -301,6 +301,8 @@ class TdmsSegment(object):
             self.final_chunk_lengths_override = self._compute_final_chunk_lengths(
                 data_size, chunk_remainder, segment_incomplete)
 
+            return data_size
+
     def _compute_final_chunk_lengths(self, chunk_size, chunk_remainder, segment_incomplete):
         """Compute object data lengths for a final chunk that has less data than expected
         """
